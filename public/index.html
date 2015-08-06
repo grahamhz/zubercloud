@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="zubercloud">
+  <head>
+    <title>zubercloud</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/toastr/toastr.min.css">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900">
+    <script type="text/javascript" src="vendor/angular/angular.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-resource/angular-resource.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="vendor/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-sanitize/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="vendor/videogular/videogular.min.js"></script>
+    <script type="text/javascript" src="vendor/videogular-controls/vg-controls.min.js"></script>
+    <script type="text/javascript" src="vendor/videogular-overlay-play/vg-overlay-play.min.js"></script>
+    <script type="text/javascript" src="vendor/videogular-poster/vg-poster.min.js"></script>
+    <script type="text/javascript" src="vendor/videogular-buffering/vg-buffering.min.js"></script>
+    <script type="text/javascript" src="vendor/toastr/toastr.min.js"></script>
+    <script type="text/javascript" src="js/zubercloud.js"></script>
+    <script type="text/javascript" src="js/controllers/main/zcMainCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/nav/zcNavCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/account/zcLoginCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/admin/zcAdminMainCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/admin/zcAdminUserAddCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/admin/zcAdminUserResetCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/admin/zcAdminMovieAddCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/admin/zcAdminMovieRemoveCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/admin/zcAdminMovieEditCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/movies/zcMoviesMainCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/movies/zcMoviesDetailCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/movies/zcMoviesPlayCtrl.js"></script>
+    <script type="text/javascript" src="js/models/main/zcNotifier.js"></script>
+    <script type="text/javascript" src="js/models/account/zcAuth.js"></script>
+    <script type="text/javascript" src="js/models/account/zcUser.js"></script>
+    <script type="text/javascript" src="js/models/movies/zcMovies.js"></script>
+    <script type="text/javascript" src="js/models/movies/zcCachedMovies.js"></script>
+  </head>
+  <body>
+    <ng-include src="'partials/includes/nav/header.html'"></ng-include>
+    <ng-include src="'partials/includes/nav/navbar.html'"></ng-include>
+    <div id="main-content" class="container-fluid">
+      <ng-view></ng-view>
+    </div>
+    <footer>
+      <ng-include src="'partials/includes/footer/footer.html'"></ng-include>
+    </footer>
+  </body>
+</html>

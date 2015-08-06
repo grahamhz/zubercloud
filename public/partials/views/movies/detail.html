@@ -1,0 +1,55 @@
+<div class="col-md-12">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h1 class="panel-title">{{ movie.title }}</h1>
+    </div>
+    <div class="panel-body">
+      <div class="col-md-4">
+        <img class="details-img" ng-src="{{ movie.img_url }}" />
+      </div>
+      <div class="col-md-8">
+        <div class="details-panel">
+          <div class="details-title">
+            <h1>{{ movie.title }}</h1>
+          </div>
+          <div class="details-tagline" ng-show="movie.tagline">
+            <h4>"{{ movie.tagline }}"</h4>
+          </div>
+          <div class="details-year">
+            <h4>Year:</h4>
+            <h4>{{ movie.year }}</h4>
+          </div>
+          <div class="details-director">
+            <h5>Director:</h5>
+            <h5>{{ movie.director }}</h5>
+          </div>
+          <div class="details-starring">
+            <h5>Starring:</h5>
+            <h5>{{ movie.starring }}</h5>
+          </div>
+          <div class="details-runtime">
+            <span>Runtime:</span>
+            <span>{{ movie.runtime }} mins </span>
+          </div>
+          <div class="details-added">
+            <span>Date Added:</span>
+            <span>{{ movie.dateAdded | date: 'MMM d, y'}}</span>
+          </div>
+          <div class="details-tags">
+            <div class="movie-tag" ng-repeat="tag in movie.tags">
+              {{ tag }}
+            </div>
+          </div>
+        </div>
+        <div class="details-panel marg-top-sm">
+          <a ng-href="#!/movies/play/{{ movie._id }}" class="btn btn-primary details-play">
+            <span class="glyphicon glyphicon-play"></span>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-12 details-panel marg-top-sm">
+        <h4>{{ movie.plot }}</h4>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="col-md-12">
+  <div id="panel-add-user" class="panel panel-default">
+    <div class="panel-heading">
+      <h1 class="panel-title">Add New User</h1>
+    </div>
+    <div class="panel-body">
+      <form id="add-user-form" name="addUserForm">
+        <div class="input-group marg-sm">
+          <span class="input-group-addon">Username</span>
+          <input type="text" ng-model="user.unid" class="form-control" required>
+        </div>
+        <div class="input-group marg-sm">
+          <span class="input-group-addon">First Name</span>
+          <input type="text" ng-model="user.firstName" class="form-control" required>
+        </div>
+        <div class="input-group marg-sm">
+          <span class="input-group-addon">Last Name</span>
+          <input type="text" ng-model="user.lastName" class="form-control" required>
+        </div>
+        <div class="input-group marg-sm">
+          <span class="input-group-addon">Email</span>
+          <input type="email" ng-model="user.email" class="form-control" required>
+        </div>
+        <div class="input-group marg-sm">
+          <span class="input-group-addon">Password</span>
+          <input type="password" ng-model="user.password" class="form-control" required>
+        </div>
+        <div class="input-group marg-sm">
+          <span class="input-group-addon">Special Roles</span>
+          <select ng-model="user.role">
+            <option selected value="none">None</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+        <div class="centered marg-sm pad-top-sm">
+          <button type="submit" ng-disabled="addUserForm.$invalid" ng-click="add_user(user)" class="btn btn-primary">
+            <span class="btn-text">Submit</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
