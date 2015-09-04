@@ -10,6 +10,10 @@ video {
   width: 100%;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 
 
 /*=======
@@ -50,8 +54,8 @@ navbar properties
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:focus,
 .navbar-inverse .navbar-nav > .open > a:hover {
-  color: #F1F1F1;
-  background-color: #4D4D4D;
+  color: #00ACED;
+  background-color: #3D3D3D;
 }
 
 .dropdown-menu {
@@ -59,6 +63,11 @@ navbar properties
   border-radius: 0;
   box-shadow: 0 11px 12px rgba(0,0,0,0.176);
   background-color: #4D4D4D;
+  opacity: .9;
+  -webkit-animation: slide-in-top .2s;
+  -moz-animation: slide-in-top .2s;
+  -o-animation: slide-in-top .2s;
+  animation: slide-in-top ease-in-out .15s;
 }
 
 .dropdown-menu > li > a {
@@ -66,7 +75,12 @@ navbar properties
 }
 
 .dropdown-menu > li > a:hover {
-  background-color: #696969;
+  background-color: #2A2A2A;
+  color: #F1F1F1;
+}
+
+.navbar-nav > li > .dropdown-menu {
+  top: 115%;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
@@ -100,6 +114,8 @@ navbar properties
 
 
 
+
+
 /*=======
 jumbotron properties
 =======*/
@@ -124,6 +140,11 @@ panel properties
   border: none;
   border-radius: 0;
   background-color: #2A2A2A;
+
+  -webkit-animation: slide-in-top ease-in-out .15s;
+  -moz-animation: slide-in-top ease-in-out .15s;
+  -o-animation: slide-in-top ease-in-out .15s;
+  animation: slide-in-top ease-in-out .15s;
 }
 
 .panel-heading {
@@ -143,6 +164,10 @@ panel properties
 
 #log-in-form {
   text-align: center;
+}
+
+.padd-xs {
+  padding: 5px;
 }
 
 .marg-sm {
@@ -171,6 +196,45 @@ panel properties
   width: 100%;
 }
 
+.panel-movie-holder {
+  display: inline-block;
+  float: none;
+
+  -webkit-transition: transform ease-in-out .15s;
+  -moz-transition: transform ease-in-out .15s;
+  -o-transition: transform ease-in-out .15s;
+  transition: transform ease-in-out .15s;
+}
+
+.panel-movie-holder:hover {
+  -ms-transform: translateY(-3%);
+  -webkit-transform: translateY(-3%);
+  transform: translateY(-3%);
+}
+
+.panel-movie .panel-body {
+  padding: 0;
+}
+
+.panel-movie .panel-footer {
+  background-color: #3D3D3D;
+  border-radius: 0;
+  color: #F1F1F1;
+  font-size: 14px;
+}
+
+.panel-movie .movie-title-text {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0;
+}
+
+#panel-add-movie .panel-body {
+  padding: 15px 0;
+}
 
 /*=======
 panel tile properties
@@ -212,6 +276,39 @@ panel tile properties
   line-height: 31px;
 }
 
+.panel-upload {
+  color: #F1F1F1;
+}
+
+.panel-upload span.file-title {
+  display: block;
+  float: left;
+  width: 30%;
+  text-align: center;
+}
+
+.panel-upload span.file-progress {
+  display: block;
+  float: left;
+  height: 20px;
+  width: 60%;
+  background-color: #696969;
+  text-align: center;
+}
+
+.panel-upload span.file-cancel {
+  display: block;
+  float: left;
+  width: 10%;
+  text-align: center;
+}
+
+.file-progress-bar {
+  width: 0px;
+  background-color: #00ACED;
+  height: 20px;
+}
+
 
 /*=======
 button properties
@@ -231,14 +328,10 @@ button properties
 }
 
 .btn-primary:hover {
-  transform: scale(1.1);
   color: #555555;
-  background-color: #F1F1F1;
+  background-color: #00ACED;
 }
 
-.btn-primary.details-play:hover {
-  transform: scale(1.03, 1.1);
-}
 
 .btn-tile {
   height: 100%;
@@ -281,6 +374,31 @@ form properties
   background-color: #696969;
 }
 
+.form-full-group {
+  margin-bottom: 20px;
+}
+
+.form-half-group {
+  width: 50%;
+  float: left;
+  padding: 0 5px;
+}
+
+.form-half-group .form-half-group-title {
+  margin-bottom: 5px;
+  padding: 6px;
+  color: #F1F1F1;
+  background-color: #696969;
+  text-align: center;
+}
+
+.form-half-group .input-group {
+  width: 100%;
+  padding: 5px 0;
+}
+
+
+
 
 /*=======
 img properties
@@ -296,8 +414,7 @@ img properties
 }
 
 .img-movie {
-  height: 194px;
-  width: 131px;
+  width: 100%;
   transition: all ease-in-out .2s;
 }
 
@@ -340,4 +457,46 @@ select {
 
 .centered {
   text-align: center;
+}
+
+#add-movie-preview {
+
+}
+
+#add-movie-preview img {
+  width: 100%;
+}
+
+.drop-add-movie {
+  height: 100px;
+  width: 100%;
+  margin-top: 20px;
+  background-color: #3D3D3D;
+  text-align: center;
+
+  -webkit-transition: background-color ease-in-out .15s;
+  -moz-transition: background-color ease-in-out .15s;
+  -o-transition: background-color ease-in-out .15s;
+  transition: background-color ease-in-out .15s;
+}
+
+.drop-add-movie span {
+  position: relative;
+  top: 40%;
+  color: #696969;
+}
+
+.form-full-submit {
+  display: block;
+  width: 100%;
+  padding: 5px;
+
+}
+
+.form-full-submit button{
+  width: 100%;
+}
+
+.marg-top-xs {
+  margin-top: 20px;
 }

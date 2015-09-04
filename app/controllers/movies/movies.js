@@ -32,8 +32,10 @@ exports.getMovies = function(req, res) {
 
 exports.playMovieByID = function(req, res) {
 
+  console.log(req.params);
+
   var rootpath = path.normalize(__dirname + '/../../');
-  var moviePath = rootpath + 'videos/test_video.mp4';
+  var moviePath = rootpath + 'videos/Contagion.mp4';
   var contentType = "video/mp4";
 
   fs.stat(moviePath, function(err, stats) {

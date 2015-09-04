@@ -14,7 +14,26 @@
       </form>
     </div>
   </div>
-  <div class="panel panel-default" ng-show="searchText">
+  <div class="panel-movie-holder col-lg-2 col-md-2 col-sm-4 col-xs-6" ng-repeat="movie in movies | filter: searchText">
+    <a class="movie-link" ng-href="#!/movies/{{ movie._id }}">
+      <div class="panel panel-default panel-movie">
+        <div class="panel-body">
+          <img class="img-movie" ng-src="{{ movie.img_url }}" />
+        </div>
+        <div class="panel-footer">
+          <div class="movie-title">
+            <span class="movie-title-text">{{ movie.title }}</span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+
+
+
+
+  <!--<div class="panel panel-default" ng-show="searchText">
     <div class="panel-heading">
       <h1 class="panel-title">{{ searchText }}</h1>
     </div>
@@ -62,5 +81,5 @@
         </a>
       </div>
     </div>
-  </div>
+  </div>-->
 </div>

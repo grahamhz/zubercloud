@@ -11,7 +11,7 @@ module.exports = function(config) {
 	//set up logging
 	db.on('error', console.error.bind(console, 'connection error...'));
 	db.once('open', function callback() {
-		console.log('database opened');
+		console.log('Database opened.');
 	});
 
 	//set up the return object

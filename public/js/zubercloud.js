@@ -3,14 +3,14 @@ zubercloud webapp
 Created By: Graham Zuber
 for: The Zuber Family
 Created: 7.3.15
-Last Updated: 7.3.15
+Last Updated: 8.16.15
 *******************************/
 
 
 (function() {
 
-  angular.module('zubercloud', ['ngResource', 'ngRoute', 'ngSanitize',
-    'com.2fdevs.videogular', 'com.2fdevs.videogular.plugins.controls',
+  angular.module('zubercloud', ['ngResource', 'ngRoute', 'ngSanitize', 'ngAnimate',
+    'flow', 'com.2fdevs.videogular', 'com.2fdevs.videogular.plugins.controls',
     'com.2fdevs.videogular.plugins.overlayplay', 'com.2fdevs.videogular.plugins.poster'])
 
   .config(function($routeProvider, $locationProvider) {

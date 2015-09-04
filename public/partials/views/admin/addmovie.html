@@ -1,0 +1,85 @@
+<div class="col-md-12">
+  <div id="panel-add-movie" class="panel panel-default">
+    <div class="panel-heading">
+      <h1 class="panel-title">Add Movie</h1>
+    </div>
+    <div class="panel-body" flow-init flow-files-added="files_added($files, $event, $flow)">
+      <div class="container-fluid">
+        <div id="add-movie-preview" class="col-md-4">
+          <img ng-src=""/>
+        </div>
+        <form id="form-add-movie" class="col-md-8">
+          <div class="form-full-group">
+            <div class="input-group padd-xs">
+              <span class="input-group-addon">Title</span>
+              <input type="text" ng-model="title" class="form-control">
+            </div>
+            <div class="input-group padd-xs">
+              <span class="input-group-addon">Year</span>
+              <input type="text" ng-model="year" class="form-control">
+            </div>
+            <div class="input-group padd-xs">
+              <span class="input-group-addon">Tag Line</span>
+              <input type="text" ng-model="tagLine" class="form-control">
+            </div>
+            <div class="input-group padd-xs">
+              <span class="input-group-addon">Runtime</span>
+              <input type="text" ng-model="runtime" class="form-control">
+            </div>
+            <div class="input-group padd-xs">
+              <span class="input-group-addon">Director</span>
+              <input type="text" ng-model="director" class="form-control">
+            </div>
+          </div>
+          <div class="form-half-group">
+            <div class="form-half-group-title">
+              <span>Starring</span>
+            </div>
+            <div class="input-group">
+              <input type="text" ng-model="tagline" class="form-control">
+            </div>
+            <div class="input-group">
+              <input type="text" ng-model="tagline" class="form-control">
+            </div>
+            <div class="input-group">
+              <input type="text" ng-model="tagline" class="form-control">
+            </div>
+          </div>
+          <div class="form-half-group">
+            <div class="form-half-group-title">
+              <span>Genres</span>
+            </div>
+            <div class="input-group">
+              <input type="text" ng-model="tagline" class="form-control">
+            </div>
+            <div class="input-group">
+              <input type="text" ng-model="tagline" class="form-control">
+            </div>
+            <div class="input-group">
+              <input type="text" ng-model="tagline" class="form-control">
+            </div>
+          </div>
+          <div class="form-full-submit">
+            <button type="submit" ng-click="upload_files()" class="btn btn-primary marg-top-xs">
+              <span class="btn-text">Submit</span>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="container">
+        <div class="drop-add-movie col-md-12" flow-drop flow-drag-enter="dropStyle={'background-color':'#00ACED'}" flow-drag-leave="dropStyle={}" ng-style="dropStyle">
+          <span>Drop Files Here</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default panel-upload" ng-repeat="file in filesToUpload" ng-show="filesToUpload.length > 0">
+    <div class="panel-body">
+      <span class="file-title">{{ file.name }}</span>
+      <span class="file-progress">
+        <div class="file-progress-bar" ng-style="file.percentage"></div>
+      </span>
+      <span class="file-cancel glyphicon glyphicon-remove"></span>
+    </div>
+  </div>
+</div>

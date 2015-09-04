@@ -21,6 +21,8 @@
     "videogular-controls": "~1.2.5",
     "videogular-buffering": "~1.2.5",
     "videogular-overlay-play": "~1.2.5",
-    "videogular-poster": "~1.2.5"
+    "videogular-poster": "~1.2.5",
+    "angular-animate": "~1.4.4",
+    "ng-flow": "~2.6.1"
   }
 }
